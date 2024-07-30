@@ -18,7 +18,7 @@ const Navbar = () => {
   //   },
   // ];
   return (
-    <header className="w-full sticky top-0 z-10 bg-gray-100 shadow-md">
+    <header className="w-full bg-gray-100 shadow-md">
       <nav className="nav">
         <Link to="/" className="flex items-center gap-1">
           <img src={logo} width={30} height={30} alt="logo" />
