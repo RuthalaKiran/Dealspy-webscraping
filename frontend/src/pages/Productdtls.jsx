@@ -68,7 +68,7 @@ const Productdtls = () => {
                 <Link
                   to={details.url}
                   target="_blank"
-                  className="text-base text-blue-600 underline underline-offset-1 opacity-50"
+                  className="text-base text-blue-600 underline underline-offset-4 opacity-50"
                 >
                   Visit Product
                 </Link>
