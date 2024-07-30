@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import img from "../../assets/react.svg";
+import img from "../../assets/logo.png";
 import { IoMdClose } from "react-icons/io";
 import { MdMailOutline } from "react-icons/md";
 import axios from "axios";

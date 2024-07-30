@@ -68,7 +68,7 @@ const Home = () => {
         ) : (
           <div className="flex p-2 justify-around flex-wrap gap-x-8 gap-y-16">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <SkelitonCardHomePage />
+              <SkelitonCardHomePage  key={item} />
             ))}
           </div>
         )}
