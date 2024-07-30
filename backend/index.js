@@ -8,6 +8,12 @@ import cron from "node-cron"
 import axios from "axios";
 // import { cronjob } from "./cron/cron.js";
 
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // app config
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -46,6 +52,13 @@ cron.schedule('0 0 * * 0', async () => {
     // console.error('Error updating products:', error.message);
     console.log(error) 
   }
+});
+
+// confronting the 404 not found error
+app.use(express.static(path.join(__dirname, "build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(PORT, () => {
