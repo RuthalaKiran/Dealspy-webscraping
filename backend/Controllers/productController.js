@@ -94,6 +94,7 @@ export const addUserEmailToProduct = async (req, res) => {
     }
     const emailContent = await generateEmailBody(product, Notification.WELCOME);
     await sendEmail(emailContent, [useremail]);
+    console.log("email sent")
     res.json({status:true})
   } catch (error) {
     console.log(error)
