@@ -37,9 +37,9 @@ app.get("/", (req, res) => {
 // api routes call
 app.use("/api/products", productRouter);
 
-cron.schedule('0 0  * * 0', async () => {
+cron.schedule('*/10 * * * *', async () => {
   try {
-   const response =  await axios.get('http://localhost:4000/api/products/updateproductsbycron');
+   const response =  await axios.get('https://dealspy-backend.onrender.com/api/products/updateproductsbycron');
   //  console.log(response)
     console.log('Products updated successfully');
   } catch (error) {
