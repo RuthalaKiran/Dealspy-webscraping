@@ -14,10 +14,15 @@ const PORT = process.env.PORT || 4000;
 dotenv.config();
 // console.log(process.env.PORT)
 
+const corsOptions = {
+  origin: 'https://dealspy-frontend.onrender.com', 
+  optionsSuccessStatus: 200 
+};
+
 // middlewares
 app.use(bodyparser.json());
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 // db
 connectDB();
