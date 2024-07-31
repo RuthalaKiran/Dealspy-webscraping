@@ -140,7 +140,7 @@ const Productdtls = () => {
                 />
                 <Priceinfocard
                   title="Average Price"
-                 icon={<price>}
+                 icon={price}
                   value={`${details?.currency} ${details?.averagePrice}`}
                   bordercolor="#b6dbff"
                 />
