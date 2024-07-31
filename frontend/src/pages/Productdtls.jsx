@@ -9,6 +9,9 @@ import { CiStar } from "react-icons/ci";
 import { RiMessage2Fill } from "react-icons/ri";
 import Priceinfocard from "../components/Priceinfo/Priceinfocard";
 import { MdOutlineContentCopy } from "react-icons/md";
+import { BiDownvote } from "react-icons/bi";
+import { PiArrowFatUp } from "react-icons/pi";
+import { IoPricetagOutline } from "react-icons/io5";
 
 import img from "../assets/react.svg";
 import Model from "../components/Model/Model";
@@ -131,19 +134,19 @@ const Productdtls = () => {
               <div className=" flex gap-5 flex-wrap">
                 <Priceinfocard
                   title="Current Price"
-                  icon={img}
+                  icon={<IoPricetagOutline/>}
                   value={`${details.currency} ${details.currentPrice}`}
                   bordercolor="#b6dbff"
                 />
                 <Priceinfocard
-                  title="averagePrice"
-                  icon={img}
+                  title="Average Price"
+                 icon={<IoPricetagOutline/>}
                   value={`${details?.currency} ${details?.averagePrice}`}
                   bordercolor="#b6dbff"
                 />
                 <Priceinfocard
-                  title="highestPrice"
-                  icon={img}
+                  title="Highest Price"
+                   icon={<PiArrowFatUp/>}
                   value={`${details?.currency} ${
                     details?.originalPrice
                       ? details?.originalPrice
@@ -152,8 +155,8 @@ const Productdtls = () => {
                   bordercolor="#b6dbff"
                 />
                 <Priceinfocard
-                  title="lowestPrice"
-                  icon={img}
+                  title="Lowest Price"
+                 icon={<BiDownvote/>}
                   value={`${details?.currency} ${details?.lowestPrice}`}
                   bordercolor="#b6dbff"
                 />
