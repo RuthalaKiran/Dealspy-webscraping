@@ -25,6 +25,9 @@ const corsOptions = {
   optionsSuccessStatus: 200 
 };
 
+// Enable CORS for preflight requests
+app.options('*', cors(corsOptions));
+
 // middlewares
 app.use(bodyparser.json());
 app.use(express.json());
