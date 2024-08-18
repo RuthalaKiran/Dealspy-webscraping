@@ -46,8 +46,8 @@ export const scrapAndStoreProduct = async (req, res) => {
     );
     res.json({ status: true, data: newProduct });
   } catch (error) {
-    throw new Error(`failed to create/update product: ${error.message}`);
-    // res.json({status:false,data:error.message})
+    console.log(`unable to fetch ${error.message}`)
+    res.json({status:false,data:error.message})
   }
 };
 
